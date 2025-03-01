@@ -4,7 +4,7 @@ FROM eclipse-temurin:21-jdk-alpine
 
 # Create and change to the app directory.
 WORKDIR /app
-
+EXPOSE: 8761
 # Copy local code to the container image.
 COPY . ./
 
@@ -13,5 +13,3 @@ RUN ./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean depe
 
 # Run the app by dynamically finding the JAR file in the target directory
 CMD ["sh", "-c", "java -jar target/*.jar"]
-
-EXPOSE: 8761
