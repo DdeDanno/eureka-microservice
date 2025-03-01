@@ -4,7 +4,7 @@ FROM eclipse-temurin:21-jdk-alpine
 
 # Create and change to the app directory.
 WORKDIR /app
-EXPOSE: 8761
+
 # Copy local code to the container image.
 COPY . ./
 
